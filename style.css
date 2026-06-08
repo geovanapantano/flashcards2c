@@ -9,11 +9,21 @@
 body {
   background: url(img/bg-desktop-red.webp);
   font-family: Grandstander;
-  }  
+  }
+  .cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: rgb(255, 0, 212);
+  }
   .cartao__conteudo {
   background-color: var(--card-front-color);
   text-align: center;
   height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
 } 
 #container {
   display: flex;
@@ -46,6 +56,12 @@ body {
   color: var(--card-back-color);
   font-weight: 700;
 } 
+.cartao__conteudo__pergunta .cartao__conteudo__resposta{ 
+  position: absolute;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(red, green, blue, alpha);
+  backface-visibility: hidden;
+}
 footer {
   background-color: black;
   color: white;
